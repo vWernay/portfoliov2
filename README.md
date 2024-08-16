@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h2 align="center">
+  Portfolio Website<br/>
+  <a href="https://victorlwernay.tech" target="_blank">victorlwernay.tech</a>
+</h2>
+<div align="center">
+  <img alt="Demo" src=".github/smartmockups_lzx5ra06.png" />
+</div>
 
-## Getting Started
+## 🧪 Technologies
 
-First, run the development server:
+This project was developed using the following technologies:
+
+- [TypeScript](https://www.typescriptlang.org)
+- [React](https://reactjs.org)
+- [Next.js 14](https://nextjs.org/)
+- [Chakra UI](https://chakra-ui.com/)
+- [Framer Motion](https://www.framer.com/motion/) (for animations)
+- [EmailJS](https://www.emailjs.com/) (for sending emails)
+
+## 🛠️ Features
+
+- Responsive design with a clean and modern UI.
+- Dark and light mode support using Chakra UI's color mode management.
+- Smooth scroll navigation between sections.
+- Contact section with `emailjs` integration.
+- SEO optimized with custom metadata and Open Graph tags.
+
+## 🔧 Adjustments and improvements
+
+Next major updates will focus on the following tasks:
+
+- [ ] Add unit tests.
+- [ ] Implement multi-language support.
+- [ ] Add more animations and transitions with Framer Motion.
+
+## 🚀 Getting started
+
+Clone the project and access the folder.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+$ git clone https://github.com/vWernay/portfoliov2.git
+$ cd portfoliov2
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Follow the steps below:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Install the dependencies
+$ npm i
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# Start the project
+$ npm run dev
+```
 
-## Learn More
+The app will be available for access on your browser at http://localhost:3000.
 
-To learn more about Next.js, take a look at the following resources:
+## 📂 Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/
+├── app/
+│   ├── layout.tsx        # Main layout of the application
+│   ├── page.tsx          # Home page component
+│   ├── theme/            # Theme configurations
+│   │   ├── fonts.ts      # Custom fonts
+│   │   ├── providers.tsx # Providers for Chakra UI
+│   │   └── theme.ts      # Theme configuration for Chakra UI
+│   └── components/
+│       ├── Header.tsx    # Header component with navigation
+│       ├── Footer.tsx    # Footer component
+│       └── sections/     # Sections of the home page
+│           ├── Introduction.tsx
+│           ├── TechStack.tsx
+│           ├── Career.tsx
+│           └── Contact.tsx
+└── public/
+    └── assets/           # Static assets like images and icons
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 📄 License
 
-## Deploy on Vercel
+This project is licensed under the MIT License.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<p align="center">Copyright © 2024 Victor Lellis.</p>
