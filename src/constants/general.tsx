@@ -1,8 +1,8 @@
 import { PersonalProject, TechStack } from "@/types"
 import { FooterData } from "@/types/footerData"
 import { FaAws, FaGitAlt, FaGithub, FaLinkedin, FaNodeJs, FaReact, FaSass, FaVuejs } from "react-icons/fa"
-import { SiCsharp, SiExpress, SiFastify, SiFastlane, SiFirebase, SiGmail, SiGooglecloud, SiJest, SiLua, SiPrisma, SiRedux, SiTailwindcss, SiTypescript, SiZod } from "react-icons/si"
-import { TbBrandNextjs, TbBrandVite } from "react-icons/tb"
+import { SiExpress, SiFastify, SiFastlane, SiFirebase, SiGmail, SiGooglecloud, SiJest, SiLua, SiPrisma, SiRedux, SiTailwindcss, SiTypescript, SiZod } from "react-icons/si"
+import { TbBrandNextjs, TbBrandVite, TbBrandCSharp } from "react-icons/tb"
 
 export const headerNavItems = [
   { name: 'Tech Stack', route: "#tech_stack" },
@@ -99,7 +99,7 @@ export const techStacks: { [key: string]: TechStack[] } = {
     },
     {
       name: "CSharp",
-      icon: <SiCsharp size={20} />,
+      icon: <TbBrandCSharp size={20} />,
     },
   ],
   Others: [
