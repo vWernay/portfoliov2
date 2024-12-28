@@ -77,7 +77,7 @@ export default function Career() {
         <TabPanels marginTop={5}>
           {Object.entries(careerProjects).map(([k, v]) => (
             <TabPanel p={0} key={k}>
-              <SimpleGrid columns={[1, 1, 2, 2]} gap={5}>
+              <SimpleGrid columns={[1, 1, 2, 2]} gap={5} alignItems='start'>
                 {v.map((project) => (
                   <ProjectCard key={project.name} project={project} />
                 ))}
