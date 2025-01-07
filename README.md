@@ -46,10 +46,10 @@ Follow the steps below:
 
 ```bash
 # Install the dependencies
-$ npm i
+$ pnpm i
 
 # Start the project
-$ npm run dev
+$ pnpm run dev
 ```
 
 The app will be available for access on your browser at http://localhost:3000.
@@ -83,4 +83,4 @@ This project is licensed under the MIT License.
 
 ---
 
-<p align="center">Copyright © 2024 Victor Lellis.</p>
+<p align="center">Copyright © 2025 Victor Lellis.</p>
