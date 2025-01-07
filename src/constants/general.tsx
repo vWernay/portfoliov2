@@ -139,7 +139,7 @@ export const careerProjects: { [key: string]: PersonalProject[] } = {
     {
       name: "ZentriX Shop",
       image: { url: "/images/zentrix_shop_preview.png", alt: "ZentriX Shop Page" },
-      summary: "ZentriX Shop was started by me on 2019 as a Cfx.re (FiveM) Server, nowadays became a FiveM Shop with about 300 customers, also provides services to customers.",
+      summary: "ZentriX Shop was started by me on 2019 as a Cfx.re (FiveM) Server, nowadays became a FiveM Shop with about 300 public customers, also provides services to private customers.",
       link: "https://zentrix-shop.tebex.io/",
       techs: ["Lua", "Typescript", "NodeJs", "ReactJs", "VueJs", "SCSS", "Redux", "Zustand", "MySQL"],
     },
@@ -158,6 +158,26 @@ export const careerProjects: { [key: string]: PersonalProject[] } = {
       summary:
         "A Game Dashboard and built-in store for a MTA server, built in 2021.",
       techs: ["Javascript", "React", "Axios", "SCSS", "MUI v4", "NodeJs", "Express", "MySQL", "Sequelize", "Payment Gateways"],
+    },
+    {
+      name: "FuelTech NUI",
+      image: { url: "/images/brp_fueltech.png", alt: 'FuelTech In game (GTA 5)' },
+      summary:
+        "Developed a custom NUI interface for FiveM, simulating the functionality of the FuelTech FT450.",
+      techs: ["Javascript", "jQuery", "SCSS", "MySQL", "Lua"],
+    },
+    {
+      name: "WheelSpin NUI",
+      image: { url: "/images/brp_wheelspin.png", alt: 'WheelSpin In game (GTA 5)' },
+      summary:
+        "Developed a dynamic wheelspin script inspired by Forza Horizon 5 for FiveM. This project features dynamic prize management and a faithful recreation of the Forza wheelspin interface, delivering an authentic experience for players.",
+      techs: ["TypeScript", "React", "ChakraUI", "Zustand", "Vite", "MySQL", "Lua"],
+    },
+    {
+      name: "Groupmanager",
+      image: { url: "/images/groupmanager.png", alt: 'Groupmanager In game (GTA 5)' },
+      summary: "A powerful and versatile FiveM script developed over one year to provide seamless group/org management for servers. Featuring more than 10 pages, it delivers extensive functionality while supporting multi-language environments and themes. Designed with flexibility in mind, the script is entirely configurable, making it easy to adapt to various server needs and ensuring an optimal user experience.",
+      techs: ["TypeScript", "React", "MUI v5", "Redux", "Vite", "MySQL", "Lua"],
     },
   ],
   "Open Source": [
