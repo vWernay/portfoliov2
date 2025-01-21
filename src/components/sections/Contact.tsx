@@ -1,9 +1,13 @@
 'use client'
 
-import { Button, Heading, HStack, Input, InputProps, Stack, Textarea, TextareaProps, useColorModeValue, useToast, VStack } from "@chakra-ui/react"
+import Paragraph from "@/components/ui/Paragraph"
+import { Button } from "@/components/ui/button"
+import { useColorModeValue } from "@/components/ui/color-mode"
+import { Skeleton } from "@/components/ui/skeleton"
+import { toaster } from "@/components/ui/toaster"
+import { ClientOnly, Heading, HStack, Input, InputProps, Stack, Textarea, TextareaProps, VStack } from "@chakra-ui/react"
 import emailjs from '@emailjs/browser'
 import { FormEvent, useState } from "react"
-import Paragraph from "../ui/Paragraph"
 
 const CustomInput = (props: InputProps) => {
   const inputBg = useColorModeValue("gray.100", "gray.900")
@@ -22,7 +26,6 @@ export default function Contact() {
   const [subject, setSubject] = useState("")
   const [message, setMessage] = useState("")
   const [isLoading, setIsLoading] = useState(false)
-  const toast = useToast()
 
   const clearInputStates = () => {
     setName("")
@@ -46,77 +49,77 @@ export default function Contact() {
       .then(() => {
         clearInputStates()
 
-        toast({
+        toaster.create({
           title: "Email sent.",
           description:
             "You had successfully sent the email. I will reply your email ASAP. Thank you!",
-          status: "success",
-          duration: 8000,
-          isClosable: true,
+          type: "success",
+          duration: 5000
         })
       })
       .catch((error) => {
         clearInputStates()
 
-        toast({
+        toaster.create({
           title: "Email not sent.",
           description: error.text,
-          status: "error",
-          duration: 8000,
-          isClosable: true,
+          type: "error",
+          duration: 5000
         })
       })
   }
 
   return (
-    <Stack as='section' id='contact' spacing={4}>
-      <Heading as='h2'>Contact me</Heading>
+    <Stack as='section' id='contact' gap={4}>
+      <Heading as='h2' size='3xl'>Contact me</Heading>
       <Paragraph fontSize='large'>Feel free to contact me!</Paragraph>
-      <VStack as='form' onSubmit={handleSubmit} spacing={4} width='full'>
-        <HStack width='full' spacing={4}>
+      <ClientOnly fallback={< Skeleton w='full' h={200} />}>
+        <VStack as='form' onSubmit={handleSubmit} gap={4} width='full'>
+          <HStack width='full' gap={4}>
+            <CustomInput
+              id='name'
+              type='text'
+              placeholder='Name'
+              value={name}
+              onChange={(event) => setName(event.currentTarget.value)}
+              required
+            />
+            <CustomInput
+              id='email'
+              type='email'
+              placeholder='E-mail'
+              value={email}
+              onChange={(event) => setEmail(event.currentTarget.value)}
+              required
+            />
+          </HStack>
           <CustomInput
-            id='name'
+            id='subject'
             type='text'
-            placeholder='Name'
-            value={name}
-            onChange={(event) => setName(event.currentTarget.value)}
-            isRequired
+            placeholder='Subject'
+            value={subject}
+            onChange={(event) => setSubject(event.currentTarget.value)}
+            required
           />
-          <CustomInput
-            id='email'
-            type='email'
-            placeholder='E-mail'
-            value={email}
-            onChange={(event) => setEmail(event.currentTarget.value)}
-            isRequired
+          <CustomTextarea
+            id='message'
+            placeholder='Message'
+            value={message}
+            onChange={(event) => setMessage(event.currentTarget.value)}
+            required
           />
-        </HStack>
-        <CustomInput
-          id='subject'
-          type='text'
-          placeholder='Subject'
-          value={subject}
-          onChange={(event) => setSubject(event.currentTarget.value)}
-          isRequired
-        />
-        <CustomTextarea
-          id='message'
-          placeholder='Message'
-          value={message}
-          onChange={(event) => setMessage(event.currentTarget.value)}
-          isRequired
-        />
-        <Button
-          type='submit'
-          variant='solid'
-          colorScheme='blue'
-          size='lg'
-          isLoading={isLoading}
-          loadingText='Submitting message...'
-        >
-          Send Message
-        </Button>
-      </VStack>
+          <Button
+            type='submit'
+            variant='solid'
+            colorScheme='blue'
+            size='lg'
+            loading={isLoading}
+            loadingText='Submitting message...'
+          >
+            Send Message
+          </Button>
+        </VStack>
+      </ClientOnly>
     </Stack>
   )
 }

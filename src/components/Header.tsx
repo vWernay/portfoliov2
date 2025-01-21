@@ -1,10 +1,17 @@
 'use client'
 
-import { headerNavItems, languages } from "@/constants"
-import { Image } from "@chakra-ui/next-js"
-import { Center, Link as ChakraLink, Divider, Flex, HStack, IconButton, Menu, MenuButton, MenuItem, MenuList, Text, useColorMode, useColorModeValue } from "@chakra-ui/react"
+import { ColorModeButton, useColorModeValue } from "@/components/ui/color-mode"
+import { headerNavItems } from "@/constants"
+import { Center, Link as ChakraLink, ClientOnly, Flex, HStack, IconButton, Separator, Text } from "@chakra-ui/react"
 import NextLink from "next/link"
-import { FaBars, FaMoon, FaSun } from "react-icons/fa"
+import { Skeleton } from "@/components/ui/skeleton"
+import {
+  MenuContent,
+  MenuItem,
+  MenuRoot,
+  MenuTrigger,
+} from "@/components/ui/menu"
+import { FaBars } from "react-icons/fa"
 
 interface NavLinkProps {
   children: React.ReactNode
@@ -15,9 +22,7 @@ const NavLink = ({ href, children }: NavLinkProps) => {
 
   return (
     <ChakraLink
-      as={NextLink}
-      href={href}
-      passHref
+      asChild
       paddingX={2}
       paddingY={1}
       rounded='md'
@@ -27,82 +32,71 @@ const NavLink = ({ href, children }: NavLinkProps) => {
       }}
       fontWeight={600}
     >
-      {children}
+      <NextLink href={href}>
+        {children}
+      </NextLink>
     </ChakraLink>
   )
 }
 
 export default function Header() {
-  const { colorMode, toggleColorMode } = useColorMode()
-
   return (
-    <Flex
-      as='header'
-      position='sticky'
-      top={0}
-      height={16}
-      alignItems='center'
-      justifyContent='space-between'
-      paddingX={4}
-      bg={useColorModeValue('gray.100', 'gray.900')}
-      zIndex={9}
-    >
-      <HStack gap='3rem'>
-        <Text
-          as='h1'
-          fontSize='lg'
-          fontWeight={600}
-        >
-          <NextLink href='#introduction'>victorlwernay.tech</NextLink>
-        </Text>
-        <Center height='5vh'>
-          <Divider orientation='vertical' borderColor='gray.500' />
-        </Center>
-        <HStack as='nav' spacing={4} display={['none', 'none', 'inherit']}>
-          {(headerNavItems.map((navItem) => (
-            <NavLink
-              key={navItem.route}
-              href={navItem.route}
-            >
-              {navItem.name}
-            </NavLink>
-          )))}
+    <ClientOnly fallback={<Skeleton h={16} />}>
+      <Flex
+        as='header'
+        position='sticky'
+        top={0}
+        height={16}
+        alignItems='center'
+        justifyContent='space-between'
+        paddingX={4}
+        bg={useColorModeValue('gray.100', 'gray.900')}
+        zIndex={9}
+      >
+        <HStack gap='3rem'>
+          <Text
+            as='h1'
+            fontSize='lg'
+            fontWeight={600}
+          >
+            <NextLink href='#introduction'>victorlwernay.tech</NextLink>
+          </Text>
+          <Center height='5vh'>
+            <Separator orientation='vertical' height="full" borderColor='gray.800' />
+          </Center>
+          <HStack as='nav' gap={4} display={['none', 'none', 'inherit']}>
+            {(headerNavItems.map((navItem) => (
+              <NavLink
+                key={navItem.route}
+                href={navItem.route}
+              >
+                {navItem.name}
+              </NavLink>
+            )))}
+          </HStack>
         </HStack>
-      </HStack>
-      <Flex alignItems='center'>
-        <HStack spacing={7}>
-          <IconButton
-            aria-label="Switch color mode"
-            icon={colorMode === 'light' ? <FaMoon /> : <FaSun />}
-            variant='ghost'
-            onClick={toggleColorMode}
-            _hover={{
-              bg: useColorModeValue("gray.200", "gray.800")
-            }}
-          />
-          <Image
-            alt={languages[0].name}
-            src={languages[0].icon}
-            boxSize='1.5rem'
-            display='none' // todo: add support for multi language
-          />
-          <Menu>
-            <MenuButton
-              as={IconButton}
-              aria-label="Open menu"
-              icon={<FaBars />}
-              display={['inherit', 'inherit', 'none']}
-            />
-            <MenuList>
-              {(headerNavItems.map((navItem) => (
-                <MenuItem key={navItem.route} as={NextLink} href={navItem.route} fontWeight={600}>
-                  {navItem.name}
-                </MenuItem>
-              )))}
-            </MenuList>
-          </Menu>
-        </HStack>
+        <Flex alignItems='center'>
+          <HStack gap={7}>
+            <ColorModeButton />
+            <MenuRoot>
+              <MenuTrigger asChild display={['inherit', 'inherit', 'none']}>
+                <IconButton size="sm">
+                  <FaBars />
+                </IconButton>
+              </MenuTrigger>
+              <MenuContent>
+                {headerNavItems.map((navItem, index) => (
+                  <MenuItem key={index} value={navItem.route}>
+                    <NextLink href={navItem.route}>
+                      {navItem.name}
+                    </NextLink>
+                  </MenuItem>
+                ))}
+              </MenuContent>
+            </MenuRoot>
+          </HStack>
+        </Flex>
       </Flex>
-    </Flex>
+    </ClientOnly>
   )
 }

@@ -1,13 +1,15 @@
 'use client'
 
+import { useColorModeValue } from "@/components/ui/color-mode";
 import { footerData } from "@/constants";
-import { Box, Flex, HStack, IconButton, Link, Text, useColorModeValue } from "@chakra-ui/react";
+import { Box, ClientOnly, Flex, HStack, IconButton, Link, Text } from "@chakra-ui/react";
+import { SkeletonText } from "./ui/skeleton";
 
 export default function Footer() {
   return (
     <HStack
       as='footer'
-      spacing={[1, 2]}
+      gap={[1, 2]}
       padding={4}
       justifyContent='space-between'
       alignItems='center'
@@ -22,27 +24,29 @@ export default function Footer() {
         alignItems='center'
         w='full'
       >
-        <Text
-          textAlign='center'
-          fontSize='sm'
-          color={useColorModeValue('gray.500', 'gray.200')}
-        >
-          {footerData.author}
-        </Text>
+        <ClientOnly fallback={<SkeletonText w={300} noOfLines={1} />}>
+          <Text
+            textAlign='center'
+            fontSize='sm'
+            color={useColorModeValue('gray.800', 'gray.200')}
+          >
+            {footerData.author}
+          </Text>
+        </ClientOnly>
         <Box textAlign='center'>
           {footerData.socialUrls.map((socialMedia, index) => (
             <IconButton
               key={index}
-              as={Link}
-              isExternal
               aria-label={socialMedia.name}
-              href={socialMedia.url}
               colorScheme={socialMedia.type}
-              icon={socialMedia.icon}
               variant='ghost'
               size='lg'
-              isRound
-            />
+              borderRadius="full"
+            >
+              <Link target="_blank" rel="noopener noreferrer" href={socialMedia.url}>
+                {socialMedia.icon}
+              </Link>
+            </IconButton>
           ))}
         </Box>
       </Flex>

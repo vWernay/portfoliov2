@@ -2,7 +2,8 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import type { Metadata } from "next";
 import { fonts } from "./theme/fonts";
-import { Providers } from "./theme/providers";
+import { Provider } from "@/components/ui/provider";
+import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: "Victor Lellis | FullStack Developer",
@@ -32,18 +33,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html className={fonts.rubik.variable} lang="en" suppressHydrationWarning>
       <head>
         <meta name="robots" content="index, follow" />
       </head>
-      <body className={fonts.rubik.variable}>
-        <Providers>
+      <body>
+        <Provider>
           <Header />
 
+          <Toaster />
           {children}
 
           <Footer />
-        </Providers>
+        </Provider>
       </body>
     </html>
   )
