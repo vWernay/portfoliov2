@@ -60,17 +60,16 @@ src/
 │   ├── layout.tsx        # Main layout of the application
 │   ├── page.tsx          # Home page component
 │   ├── theme/            # Theme configurations
-│   │   ├── fonts.ts      # Custom fonts
-│   │   ├── providers.tsx # Providers for Chakra UI
-│   │   └── theme.ts      # Theme configuration for Chakra UI
+│   │   └── fonts.ts      # Custom fonts
 │   └── components/
 │       ├── Header.tsx    # Header component with navigation
 │       ├── Footer.tsx    # Footer component
-│       └── sections/     # Sections of the home page
-│           ├── Introduction.tsx
-│           ├── TechStack.tsx
-│           ├── Career.tsx
-│           └── Contact.tsx
+│       ├── sections/     # Sections of the home page
+│       │   ├── Introduction.tsx
+│       │   ├── TechStack.tsx
+│       │   ├── Career.tsx
+│       │   └── Contact.tsx
+|       └── ui/           # Snippets
 └── public/
     └── assets/           # Static assets like images and icons
 ```
