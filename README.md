@@ -14,7 +14,6 @@ This project was developed using the following technologies:
 - [React](https://reactjs.org)
 - [Next.js 14](https://nextjs.org/)
 - [Chakra UI](https://chakra-ui.com/)
-- [Framer Motion](https://www.framer.com/motion/) (for animations)
 - [EmailJS](https://www.emailjs.com/) (for sending emails)
 
 ## 🛠️ Features
@@ -31,7 +30,6 @@ Next major updates will focus on the following tasks:
 
 - [ ] Add unit tests.
 - [ ] Implement multi-language support.
-- [ ] Add more animations and transitions with Framer Motion.
 
 ## 🚀 Getting started
 
