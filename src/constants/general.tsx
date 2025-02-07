@@ -35,7 +35,7 @@ export const footerData: FooterData = {
 }
 
 export const introductionAvatar = { url: "https://avatars.githubusercontent.com/u/32583593?v=4", name: "vWernay" }
-export const resumeLink = "https://drive.google.com/file/d/1NWMykP7bV4l6rCPGjCm1YES2GwH2yKB8/view?usp=sharing"
+export const resumeLink = "https://drive.google.com/file/d/1ytuyxhAkIsJSMwhKfH4Ic-Q0CHpacHKl/view?usp=sharing"
 
 export const techStacks: { [key: string]: TechStack[] } = {
   ['Web (Frontend)']: [
