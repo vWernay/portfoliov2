@@ -59,7 +59,7 @@ export default function Header() {
             fontSize='lg'
             fontWeight={600}
           >
-            <NextLink href='#introduction'>victorlwernay.tech</NextLink>
+            <NextLink href='#introduction'>victorlwernay.dev</NextLink>
           </Text>
           <Center height='5vh'>
             <Separator orientation='vertical' height="full" borderColor='gray.800' />

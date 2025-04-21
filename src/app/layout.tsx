@@ -8,11 +8,11 @@ import { Toaster } from "@/components/ui/toaster";
 export const metadata: Metadata = {
   title: "Victor Lellis | FullStack Developer",
   description: "A Web and Script full-stack developer.",
-  keywords: "React, Vue, NodeJs, Javascript, Typescript, Lua, Cfx.re, FiveM, Portfolio, VictorLWB, Victor Lellis, Victor Wernay",
+  keywords: "React, Vue, NodeJs, Javascript, Typescript, Lua, Cfx.re, FiveM, Portfolio, VictorLWB, Victor Lellis, Victor Wernay, Developer",
   icons: 'https://avatars.githubusercontent.com/u/32583593?v=4',
   openGraph: {
     type: "website",
-    url: "https://victorlwernay.tech",
+    url: "https://www.victorlwernay.dev",
     title: "Victor Lellis | FullStack Developer",
     siteName: "Victor Lellis | FullStack Developer",
     description: "A Web and Script full-stack developer.",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         url: "https://avatars.githubusercontent.com/u/32583593?v=4",
         width: 1200,
         height: 630,
-        alt: "Victor Lellis | FullStack Developer",
+        alt: "Profile photo of Victor Lellis, full-stack developer",
       },
     ],
   }
@@ -36,6 +36,23 @@ export default function RootLayout({
     <html className={fonts.rubik.variable} lang="en" suppressHydrationWarning>
       <head>
         <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Victor Lellis",
+              "url": "https://www.victorlwernay.dev",
+              "sameAs": [
+                "https://github.com/vWernay",
+                "https://linkedin.com/in/victor-lellis"
+              ],
+              "jobTitle": "FullStack Developer",
+              "image": "https://avatars.githubusercontent.com/u/32583593?v=4"
+            }
+          `}
+        </script>
       </head>
       <body>
         <Provider>

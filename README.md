@@ -1,6 +1,6 @@
 <h2 align="center">
   Portfolio Website<br/>
-  <a href="https://victorlwernay.tech" target="_blank">victorlwernay.tech</a>
+  <a href="https://victorlwernay.dev" target="_blank">victorlwernay.dev</a>
 </h2>
 <div align="center">
   <img alt="Demo" src=".github/smartmockups_lzx5ra06.png" />
