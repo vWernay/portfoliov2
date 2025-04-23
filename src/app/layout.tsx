@@ -27,6 +27,19 @@ export const metadata: Metadata = {
   }
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Victor Lellis",
+  url: "https://www.victorlwernay.dev",
+  sameAs: [
+    "https://github.com/vWernay",
+    "https://linkedin.com/in/victor-lellis"
+  ],
+  jobTitle: "FullStack Developer",
+  image: "https://avatars.githubusercontent.com/u/32583593?v=4"
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -37,22 +50,11 @@ export default function RootLayout({
       <head>
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "Person",
-              "name": "Victor Lellis",
-              "url": "https://www.victorlwernay.dev",
-              "sameAs": [
-                "https://github.com/vWernay",
-                "https://linkedin.com/in/victor-lellis"
-              ],
-              "jobTitle": "FullStack Developer",
-              "image": "https://avatars.githubusercontent.com/u/32583593?v=4"
-            }
-          `}
-        </script>
+        <script
+          type="application/ld+json"
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body>
         <Provider>
