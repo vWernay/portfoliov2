@@ -138,10 +138,10 @@ export const careerProjects: { [key: string]: PersonalProject[] } = {
   Works: [
     {
       name: "ZentriX Shop",
-      image: { url: "/images/zentrix_shop_preview.png", alt: "ZentriX Shop Page" },
-      summary: "ZentriX Shop was started by me on 2019 as a Cfx.re (FiveM) Server, nowadays became a FiveM Shop with about 300 public customers, also provides services to private customers.",
-      link: "https://zentrix-shop.tebex.io/",
-      techs: ["Lua", "Typescript", "NodeJs", "ReactJs", "VueJs", "SCSS", "Redux", "Zustand", "MySQL"],
+      image: { url: "/images/zentrix_shop_preview.png", alt: "ZentriX Shop Website" },
+      summary: "ZentriX Shop was started by me on 2019 as a Cfx.re (FiveM) Server, nowadays became a Shop with about 300 public customers, providing ready packages and private orders. Recently, I developed the storefront using Next 15, React 19 and Tebex API.",
+      link: "https://zentrix-shop.com/",
+      techs: ["Lua", "Typescript", "NodeJs", "ReactJs", "VueJs", "SCSS", "Redux", "Zustand", "MySQL", "NextJs"],
     },
     {
       name: "IF Developments",
@@ -187,6 +187,13 @@ export const careerProjects: { [key: string]: PersonalProject[] } = {
       summary: 'It\'s a mobile application developed for the "CEM 01 do Guará" educational institution, designed to control Arduino-based BT cars made on robotics classes, using Classic Bluetooth.',
       link: "https://github.com/vWernay/gg-arduino-car-controller",
       techs: ["React Native", "Typescript", "Expo", "TailwindCSS", "Classic Bluetooth Lib"],
+    },
+    {
+      name: "Node.js - PostgreSQL to CSV",
+      image: { url: "/images/node-pg-csv.png", alt: 'Illustration with PostgreSQL, Node.js and CSV icons.' },
+      summary: 'A Node.js script that exports huge data from a PostgreSQL database into a CSV file using streams, pipeline and query cursor.',
+      link: "https://github.com/vWernay/node-pg-csv",
+      techs: ["Typescript", "NodeJs", "PostgreSQL"],
     },
     {
       name: "Plann.er (NLW Journey)",
