@@ -24,6 +24,9 @@ export const metadata: Metadata = {
         alt: "Profile photo of Victor Lellis, full-stack developer",
       },
     ],
+  },
+  alternates: {
+    canonical: "https://www.victorlwernay.dev"
   }
 };
 
