@@ -4,7 +4,7 @@ import Paragraph from "@/components/ui/Paragraph"
 import { useColorModeValue } from "@/components/ui/color-mode"
 import { techStacks } from "@/constants"
 import { Box, Flex, Grid, Heading, IconButton, Stack, Tabs, Text } from "@chakra-ui/react"
-import { ReactElement } from "react"
+import type { ReactElement } from "react"
 
 interface IStackCard {
   stack: { name: string, icon: ReactElement }

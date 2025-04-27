@@ -1,5 +1,5 @@
-import { PersonalProject, TechStack } from "@/types"
-import { FooterData } from "@/types/footerData"
+import type { PersonalProject, TechStack } from "@/types"
+import type { FooterData } from "@/types/footerData"
 import { FaAws, FaGitAlt, FaGithub, FaLinkedin, FaNodeJs, FaReact, FaSass, FaVuejs } from "react-icons/fa"
 import { SiExpress, SiFastify, SiFastlane, SiFirebase, SiGmail, SiGooglecloud, SiJest, SiLua, SiPrisma, SiRedux, SiTailwindcss, SiTypescript, SiZod } from "react-icons/si"
 import { TbBrandNextjs, TbBrandVite, TbBrandCSharp } from "react-icons/tb"
@@ -38,7 +38,7 @@ export const introductionAvatar = { url: "https://avatars.githubusercontent.com/
 export const resumeLink = "https://drive.google.com/file/d/1ytuyxhAkIsJSMwhKfH4Ic-Q0CHpacHKl/view?usp=sharing"
 
 export const techStacks: { [key: string]: TechStack[] } = {
-  ['Web (Frontend)']: [
+  'Web (Frontend)': [
     {
       name: "React",
       icon: <FaReact size={20} />,

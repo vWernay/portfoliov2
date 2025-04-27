@@ -36,14 +36,14 @@ export default function Footer() {
         <Box textAlign='center'>
           {footerData.socialUrls.map((socialMedia, index) => (
             <IconButton
-              key={index}
+              key={socialMedia.name}
               aria-label={socialMedia.name}
               colorScheme={socialMedia.type}
               variant='ghost'
               size='lg'
               borderRadius="full"
             >
-              <Link target="_blank" rel="noopener noreferrer" href={socialMedia.url}>
+              <Link target="_blank" rel="noopener noreferrer" href={socialMedia.url} aria-label={`Check my ${socialMedia.name} profile`}>
                 {socialMedia.icon}
               </Link>
             </IconButton>

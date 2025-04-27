@@ -4,7 +4,7 @@ import { useColorModeValue } from "@/components/ui/color-mode"
 import Paragraph from "@/components/ui/Paragraph"
 import { Tag } from "@/components/ui/tag"
 import { careerProjects } from "@/constants"
-import { PersonalProject } from "@/types"
+import type { PersonalProject } from "@/types"
 import { Box, Center, ClientOnly, Flex, Heading, Image, LinkBox, SimpleGrid, Skeleton, Stack, Tabs, Text } from "@chakra-ui/react"
 
 interface IProjectCard {

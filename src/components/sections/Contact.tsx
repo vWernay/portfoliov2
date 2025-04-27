@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button"
 import { useColorModeValue } from "@/components/ui/color-mode"
 import { Skeleton } from "@/components/ui/skeleton"
 import { toaster } from "@/components/ui/toaster"
-import { ClientOnly, Heading, HStack, Input, InputProps, Stack, Textarea, TextareaProps, VStack } from "@chakra-ui/react"
+import { ClientOnly, Heading, HStack, Input, type InputProps, Stack, Textarea, type TextareaProps, VStack } from "@chakra-ui/react"
 import emailjs from '@emailjs/browser'
-import { FormEvent, useState } from "react"
+import { type FormEvent, useState } from "react"
 
 const CustomInput = (props: InputProps) => {
   const inputBg = useColorModeValue("gray.100", "gray.900")
