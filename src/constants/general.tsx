@@ -182,6 +182,13 @@ export const careerProjects: { [key: string]: PersonalProject[] } = {
   ],
   "Open Source": [
     {
+      name: "CashInfinitec App",
+      image: { url: "/images/cashinfinitec.webp", alt: 'CashInfinitec APP' },
+      summary: 'It\'s a mobile app developed during a college project focused on business modeling and requirements analysis. After the prototyping phase in Figma, I decided to independently develop the mobile application using React Native with Expo.',
+      link: "https://github.com/vWernay/cashinfinitec-app",
+      techs: ["React Native", "Typescript", "Expo", "NativeWind", "Zod"],
+    },
+    {
       name: "Arduino Car Controller",
       image: { url: "/images/gg_arduino_car_controller.webp", alt: 'Arduino Controller APP' },
       summary: 'It\'s a mobile application developed for the "CEM 01 do Guará" educational institution, designed to control Arduino-based BT cars made on robotics classes, using Classic Bluetooth.',
