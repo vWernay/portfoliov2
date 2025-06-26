@@ -1,10 +1,16 @@
-import { Rubik } from 'next/font/google'
+import { Inter, Space_Grotesk } from 'next/font/google'
 
-const rubik = Rubik({
+const space_grotesk = Space_Grotesk({
     subsets: ['latin'],
-    variable: '--font-rubik',
+    variable: '--font-space-grotesk',
+})
+
+const inter = Inter({
+    subsets: ['latin'],
+    variable: '--font-inter',
 })
 
 export const fonts = {
-    rubik,
+    space_grotesk,
+    inter,
 }

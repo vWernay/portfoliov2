@@ -16,8 +16,8 @@ const system = createSystem(defaultConfig, {
   theme: {
     tokens: {
       fonts: {
-        heading: { value: "var(--font-rubik)" },
-        body: { value: "var(--font-rubik)" },
+        heading: { value: "var(--font-space-grotesk)" },
+        body: { value: "var(--font-inter)" },
       },
     },
   },

@@ -49,7 +49,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className={fonts.rubik.variable} lang="en" suppressHydrationWarning>
+    <html className={`${fonts.inter.variable} ${fonts.space_grotesk.variable}`} lang="en" suppressHydrationWarning>
       <head>
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
