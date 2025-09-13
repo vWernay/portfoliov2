@@ -1,83 +1,93 @@
-<h2 align="center">
-  Portfolio Website<br/>
-  <a href="https://victorlwernay.dev" target="_blank">victorlwernay.dev</a>
-</h2>
 <div align="center">
-  <img alt="Demo" src=".github/smartmockups_lzx5ra06.png" />
+  <h1>My Personal Portfolio</h1>
+  <p>
+    <strong><a href="https://www.victorlwernay.dev" target="_blank">victorlwernay.dev</a></strong>
+  </p>
+  
+  <p>
+    The source code for my personal portfolio, developed with a focus on performance, SEO, modern architecture, and the best practices of the Next.js ecosystem.
+  </p>
+
+  <img src="https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js 15"/>
+  <img src="https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo=react&logoColor=white" alt="React 19"/>
+  <img src="https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript 5"/>
+  <img src="https://img.shields.io/badge/Chakra%20UI-3-teal?style=for-the-badge&logo=chakraui&logoColor=white" alt="Chakra UI 3"/>
+  <img src="https://img.shields.io/badge/BiomeJS-Linter%20&%20Formatter-green?style=for-the-badge&logo=biome&logoColor=white" alt="BiomeJS"/>
 </div>
 
-## 🧪 Technologies
+<br/>
 
-This project was developed using the following technologies:
+<div align="center">
+  <img alt="Demonstração do Portfólio" src=".github/smartmockups_lzx5ra06.png" />
+</div>
 
-- [TypeScript](https://www.typescriptlang.org)
-- [React](https://reactjs.org)
-- [Next.js 14](https://nextjs.org/)
-- [Chakra UI](https://chakra-ui.com/)
-- [EmailJS](https://www.emailjs.com/) (for sending emails)
+## ✨ Features
 
-## 🛠️ Features
+This project was built with an architecture that prioritizes user and developer experience.
 
-- Responsive design with a clean and modern UI.
-- Dark and light mode support using Chakra UI's color mode management.
-- Smooth scroll navigation between sections.
-- Contact section with `emailjs` integration.
-- SEO optimized with custom metadata and Open Graph tags.
+- 🚀 **Performance First:** Statically generated (**SSG**) with Next.js for near-instant loading and excellent Lighthouse scores.
+- 🏗️ **Modern Architecture:** Built with **Server Components (RSC)** by default, minimizing JavaScript sent to the client and ensuring optimized rendering.
+- 💅 **Automated Code Quality:** Linter and formatter integrated with **BiomeJS** (via Ultracite preset), ensuring consistency and preventing errors before each commit with **Husky**.
+- 🎨 **Modern and Responsive UI:** Clean design that adapts to any device, with Light/Dark theme support, built with **Chakra UI**.
+- 📧 **Functional Contact Form:** Integration with **EmailJS** to send emails directly from the client.
+- 🔎 **SEO Optimized:** Dynamic metadata and Open Graph tags for better indexing and sharing on social networks.
 
-## 🔧 Adjustments and improvements
+## 🛠️ Technologies Used
 
-Next major updates will focus on the following tasks:
+- **Framework:** [Next.js 15](https://nextjs.org/) (with App Router)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **UI Library:** [Chakra UI](https://chakra-ui.com/)
+- **Linting/Formatting:** [BiomeJS](https://biomejs.dev/) (com preset [Ultracite](https://www.ultracite.ai/))
+- **Commit Automation:** [Husky](https://typicode.github.io/husky/) + [lint-staged](https://github.com/okonet/lint-staged)
+- **Package Manager:** [pnpm](https://pnpm.io/)
 
-- [ ] Add unit tests.
-- [ ] Implement multi-language support.
+## 🚀 Starting
 
-## 🚀 Getting started
+To run this project locally, follow the steps below:
 
-Clone the project and access the folder.
+1.  **Clone the repository:**
 
-```bash
-$ git clone https://github.com/vWernay/portfoliov2.git
-$ cd portfoliov2
-```
+    ```bash
+    git clone https://github.com/vWernay/portfoliov2.git
+    cd portfoliov2
+    ```
 
-Follow the steps below:
+2.  **Install the dependencies:**
 
-```bash
-# Install the dependencies
-$ pnpm i
+    ```bash
+    pnpm install
+    ```
 
-# Start the project
-$ pnpm run dev
-```
+3.  **Setup environment variables:**
 
-The app will be available for access on your browser at http://localhost:3000.
+    - Create a `.env.local` file in the project root, following the example of `.env.example`:
 
-## 📂 Project Structure
+    ```env
+    NEXT_PUBLIC_EMAILJS_SERVICE_ID=YOUR_SERVICE_ID
+    NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=YOUR_TEMPLATE_ID
+    NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=YOUR_PUBLICK_KEY
+    ```
 
-```
-src/
-├── app/
-│   ├── layout.tsx        # Main layout of the application
-│   ├── page.tsx          # Home page component
-│   ├── theme/            # Theme configurations
-│   │   └── fonts.ts      # Custom fonts
-│   └── components/
-│       ├── Header.tsx    # Header component with navigation
-│       ├── Footer.tsx    # Footer component
-│       ├── sections/     # Sections of the home page
-│       │   ├── Introduction.tsx
-│       │   ├── TechStack.tsx
-│       │   ├── Career.tsx
-│       │   └── Contact.tsx
-|       └── ui/           # Snippets
-└── public/
-    └── assets/           # Static assets like images and icons
-```
+4.  **Start the development server:**
+    ```bash
+    pnpm run dev
+    ```
+
+The application will be available at <http://localhost:3000>.
+
+## 🗺️ Roadmap
+
+The next steps planned for the project are:
+
+- [ ] Add unit tests with Jest/Vitest.
+- [ ] Implement multi-language support (i18n).
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License. See the [LICENSE] file for more details.
 
 ---
 
-<p align="center">Copyright © 2025 Victor Lellis.</p>
+<p align="center">
+  Copyright © 2025 Victor Lellis.
+</p>
