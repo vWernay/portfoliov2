@@ -1,14 +1,14 @@
+import { Container, Separator } from "@chakra-ui/react"
 import Career from "@/components/sections/career"
 import Contact from "@/components/sections/contact"
 import Introduction from "@/components/sections/introduction"
 import TechStack from "@/components/sections/tech-stack"
-import { Container, Separator } from "@chakra-ui/react"
 
-export const dynamic = 'force-static'
+export const dynamic = "force-static"
 
 export default function Home() {
   return (
-    <Container as='main' maxW="breakpoint-lg" mt={["5", "10"]} mb={["5", "10"]}>
+    <Container as="main" maxW="breakpoint-lg" mb={["5", "10"]} mt={["5", "10"]}>
       <Introduction />
       <Separator marginY={10} />
       <TechStack />

@@ -1,47 +1,56 @@
-import { footerData } from "@/constants";
-import { Box, ClientOnly, Flex, HStack, IconButton, Link, Text } from "@chakra-ui/react";
-import { SkeletonText } from "./ui/skeleton";
+import {
+  Box,
+  ClientOnly,
+  Flex,
+  HStack,
+  IconButton,
+  Link,
+  Text,
+} from "@chakra-ui/react"
+import { footerData } from "@/constants/general"
+import { SkeletonText } from "./ui/skeleton"
 
 export default function Footer() {
   return (
     <HStack
-      as='footer'
+      alignItems="center"
+      as="footer"
       gap={[1, 2]}
+      justifyContent="space-between"
+      maxW="container.lg"
+      mx="auto"
       padding={4}
-      justifyContent='space-between'
-      alignItems='center'
-      w={['100%', '90%', '90%']}
-      maxW='container.lg'
-      mx='auto'
+      w={["100%", "90%", "90%"]}
     >
       <Flex
-        flexDirection={['column', 'column', 'row']}
-        flexFlow={['column-reverse', 'column-reverse']}
-        justifyContent={['center', 'space-between']}
-        alignItems='center'
-        w='full'
+        alignItems="center"
+        flexDirection={["column", "column", "row"]}
+        flexFlow={["column-reverse", "column-reverse"]}
+        justifyContent={["center", "space-between"]}
+        w="full"
       >
-        <ClientOnly fallback={<SkeletonText w={300} noOfLines={1} />}>
-          <Text
-            textAlign='center'
-            fontSize='sm'
-            color="gray.fg"
-          >
+        <ClientOnly fallback={<SkeletonText noOfLines={1} w={300} />}>
+          <Text color="gray.fg" fontSize="sm" textAlign="center">
             {footerData.author}
           </Text>
         </ClientOnly>
-        <Box textAlign='center'>
-          {footerData.socialUrls.map((socialMedia, index) => (
+        <Box textAlign="center">
+          {footerData.socialUrls.map((socialMedia) => (
             <IconButton
-              key={socialMedia.name}
               aria-label={socialMedia.name}
-              colorScheme={socialMedia.type}
-              variant='ghost'
-              size='lg'
-              borderRadius="full"
               asChild
+              borderRadius="full"
+              colorScheme={socialMedia.type}
+              key={socialMedia.name}
+              size="lg"
+              variant="ghost"
             >
-              <Link target="_blank" rel="noopener noreferrer" href={socialMedia.url} aria-label={`Check my ${socialMedia.name} profile`}>
+              <Link
+                aria-label={`Check my ${socialMedia.name} profile`}
+                href={socialMedia.url}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 {socialMedia.icon}
               </Link>
             </IconButton>

@@ -2,8 +2,8 @@
 
 import type { IconButtonProps, SpanProps } from "@chakra-ui/react"
 import { ClientOnly, IconButton, Skeleton, Span } from "@chakra-ui/react"
-import { ThemeProvider, useTheme } from "next-themes"
 import type { ThemeProviderProps } from "next-themes"
+import { ThemeProvider, useTheme } from "next-themes"
 import * as React from "react"
 import { LuMoon, LuSun } from "react-icons/lu"
 
@@ -56,11 +56,11 @@ export const ColorModeButton = React.forwardRef<
   return (
     <ClientOnly fallback={<Skeleton boxSize="9" />}>
       <IconButton
-        onClick={toggleColorMode}
-        variant="ghost"
         aria-label="Toggle color mode"
-        size="sm"
+        onClick={toggleColorMode}
         ref={ref}
+        size="sm"
+        variant="ghost"
         {...props}
         css={{
           _icon: {
@@ -79,30 +79,30 @@ export const LightMode = React.forwardRef<HTMLSpanElement, SpanProps>(
   function LightMode(props, ref) {
     return (
       <Span
-        color="fg"
-        display="contents"
         className="chakra-theme light"
+        color="fg"
         colorPalette="gray"
         colorScheme="light"
+        display="contents"
         ref={ref}
         {...props}
       />
     )
-  },
+  }
 )
 
 export const DarkMode = React.forwardRef<HTMLSpanElement, SpanProps>(
   function DarkMode(props, ref) {
     return (
       <Span
-        color="fg"
-        display="contents"
         className="chakra-theme dark"
+        color="fg"
         colorPalette="gray"
         colorScheme="dark"
+        display="contents"
         ref={ref}
         {...props}
       />
     )
-  },
+  }
 )
