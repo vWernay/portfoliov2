@@ -1,5 +1,5 @@
 import { Heading, Stack } from "@chakra-ui/react"
-import Paragraph from "@/components/ui/Paragraph"
+import Paragraph from "@/components/ui/paragraph"
 import { ContactForm } from "./form"
 
 export default function Contact() {

@@ -1,5 +1,5 @@
 import { Box, Heading, SimpleGrid, Stack, Tabs } from "@chakra-ui/react"
-import Paragraph from "@/components/ui/Paragraph"
+import Paragraph from "@/components/ui/paragraph"
 import { careerProjects } from "@/constants/general"
 import ProjectCard from "./project-card"
 

@@ -1,5 +1,5 @@
 import { Grid, Heading, Stack, Tabs } from "@chakra-ui/react"
-import Paragraph from "@/components/ui/Paragraph"
+import Paragraph from "@/components/ui/paragraph"
 import { techStacks } from "@/constants/general"
 import StackCard from "./stack-card"
 

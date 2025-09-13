@@ -4,7 +4,7 @@ import { BiPhoneCall } from "react-icons/bi"
 import { CgAlbum } from "react-icons/cg"
 import { Avatar } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
-import Paragraph from "@/components/ui/Paragraph"
+import Paragraph from "@/components/ui/paragraph"
 import { ThemedLink } from "@/components/ui/themed-link"
 import { introductionAvatar, resumeLink } from "@/constants/general"
 
