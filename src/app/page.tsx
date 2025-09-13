@@ -4,6 +4,8 @@ import Introduction from "@/components/sections/Introduction"
 import TechStack from "@/components/sections/TechStack"
 import { Container, Separator } from "@chakra-ui/react"
 
+export const dynamic = 'force-static'
+
 export default function Home() {
   return (
     <Container as='main' maxW="breakpoint-lg" mt={["5", "10"]} mb={["5", "10"]}>
