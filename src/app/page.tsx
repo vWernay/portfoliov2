@@ -1,6 +1,6 @@
 import Career from "@/components/sections/career"
 import Contact from "@/components/sections/contact"
-import Introduction from "@/components/sections/Introduction"
+import Introduction from "@/components/sections/introduction"
 import TechStack from "@/components/sections/TechStack"
 import { Container, Separator } from "@chakra-ui/react"
 
