@@ -9,8 +9,8 @@ export function ThemedLink({ children, ...props }: ThemedLinkProps) {
     <Link
       color="gray.fg"
       fontWeight="500"
-      target="_blank"
       rel="noopener noreferrer"
+      target="_blank"
       {...props}
     >
       {children}

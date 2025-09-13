@@ -1,15 +1,16 @@
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import type { Metadata } from "next";
-import { fonts } from "./theme/fonts";
-import { Provider } from "@/components/ui/provider";
-import { Toaster } from "@/components/ui/toaster";
+import type { Metadata } from "next"
+import Footer from "@/components/footer"
+import Header from "@/components/header"
+import { Provider } from "@/components/ui/provider"
+import { Toaster } from "@/components/ui/toaster"
+import { fonts } from "./theme/fonts"
 
 export const metadata: Metadata = {
   title: "Victor Lellis | FullStack Developer",
   description: "A Web and Script full-stack developer.",
-  keywords: "React, Vue, NodeJs, Javascript, Typescript, Lua, Cfx.re, FiveM, Portfolio, VictorLWB, Victor Lellis, Victor Wernay, Developer",
-  icons: 'https://avatars.githubusercontent.com/u/32583593?v=4',
+  keywords:
+    "React, Vue, NodeJs, Javascript, Typescript, Lua, Cfx.re, FiveM, Portfolio, VictorLWB, Victor Lellis, Victor Wernay, Developer",
+  icons: "https://avatars.githubusercontent.com/u/32583593?v=4",
   openGraph: {
     type: "website",
     url: "https://www.victorlwernay.dev",
@@ -26,9 +27,9 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://www.victorlwernay.dev"
-  }
-};
+    canonical: "https://www.victorlwernay.dev",
+  },
+}
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -37,26 +38,30 @@ const jsonLd = {
   url: "https://www.victorlwernay.dev",
   sameAs: [
     "https://github.com/vWernay",
-    "https://linkedin.com/in/victor-lellis"
+    "https://linkedin.com/in/victor-lellis",
   ],
   jobTitle: "FullStack Developer",
-  image: "https://avatars.githubusercontent.com/u/32583593?v=4"
+  image: "https://avatars.githubusercontent.com/u/32583593?v=4",
 }
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
-    <html className={`${fonts.inter.variable} ${fonts.space_grotesk.variable}`} lang="en" suppressHydrationWarning>
+    <html
+      className={`${fonts.inter.variable} ${fonts.space_grotesk.variable}`}
+      lang="en"
+      suppressHydrationWarning
+    >
       <head>
-        <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta content="index, follow" name="robots" />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
         <script
-          type="application/ld+json"
-          // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD script tag
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          type="application/ld+json"
         />
       </head>
       <body>

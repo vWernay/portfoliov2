@@ -39,7 +39,7 @@ export const Slider = React.forwardRef<HTMLDivElement, SliderProps>(
         </ChakraSlider.Control>
       </ChakraSlider.Root>
     )
-  },
+  }
 )
 
 function SliderThumbs(props: { value?: number[] }) {
@@ -47,7 +47,7 @@ function SliderThumbs(props: { value?: number[] }) {
   return (
     <For each={value}>
       {(_, index) => (
-        <ChakraSlider.Thumb key={index} index={index}>
+        <ChakraSlider.Thumb index={index} key={index}>
           <ChakraSlider.HiddenInput />
         </ChakraSlider.Thumb>
       )}
@@ -78,5 +78,5 @@ const SliderMarks = React.forwardRef<HTMLDivElement, SliderMarksProps>(
         })}
       </ChakraSlider.MarkerGroup>
     )
-  },
+  }
 )
