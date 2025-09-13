@@ -27,7 +27,7 @@ export const footerData: FooterData = {
     },
     {
       name: "Gmail",
-      url: "emailto:victorlwernay@gmail.com",
+      url: "mailto:victorlwernay@gmail.com",
       icon: <SiGmail />,
       type: 'red'
     },

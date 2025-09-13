@@ -1,10 +1,7 @@
-'use client'
-
-import { ColorModeButton, useColorModeValue } from "@/components/ui/color-mode"
+import { ColorModeButton } from "@/components/ui/color-mode"
 import { headerNavItems } from "@/constants"
-import { Center, Link as ChakraLink, ClientOnly, Flex, HStack, IconButton, Separator, Text } from "@chakra-ui/react"
+import { Center, Link as ChakraLink, Flex, HStack, IconButton, Separator, Text } from "@chakra-ui/react"
 import NextLink from "next/link"
-import { Skeleton } from "@/components/ui/skeleton"
 import {
   MenuContent,
   MenuItem,
@@ -18,8 +15,6 @@ interface NavLinkProps {
   href: string
 }
 const NavLink = ({ href, children }: NavLinkProps) => {
-  const hoverBg = useColorModeValue("gray.200", "gray.800")
-
   return (
     <ChakraLink
       asChild
@@ -28,7 +23,7 @@ const NavLink = ({ href, children }: NavLinkProps) => {
       rounded='md'
       _hover={{
         textDecoration: "none",
-        bg: hoverBg,
+        bg: "gray.muted",
       }}
       fontWeight={600}
     >
@@ -41,62 +36,60 @@ const NavLink = ({ href, children }: NavLinkProps) => {
 
 export default function Header() {
   return (
-    <ClientOnly fallback={<Skeleton h={16} />}>
-      <Flex
-        as='header'
-        position='sticky'
-        top={0}
-        height={16}
-        alignItems='center'
-        justifyContent='space-between'
-        paddingX={4}
-        bg={useColorModeValue('gray.100', 'gray.900')}
-        zIndex={9}
-      >
-        <HStack gap='3rem'>
-          <Text
-            as='h1'
-            fontSize='lg'
-            fontWeight={600}
-          >
-            <NextLink href='#introduction'>victorlwernay.dev</NextLink>
-          </Text>
-          <Center height='5vh'>
-            <Separator orientation='vertical' height="full" borderColor='gray.800' />
-          </Center>
-          <HStack as='nav' gap={4} display={['none', 'none', 'inherit']}>
-            {(headerNavItems.map((navItem) => (
-              <NavLink
-                key={navItem.route}
-                href={navItem.route}
-              >
-                {navItem.name}
-              </NavLink>
-            )))}
-          </HStack>
+    <Flex
+      as='header'
+      position='sticky'
+      top={0}
+      height={16}
+      alignItems='center'
+      justifyContent='space-between'
+      paddingX={4}
+      bg="bg.muted"
+      zIndex={9}
+    >
+      <HStack gap='3rem'>
+        <Text
+          as='h1'
+          fontSize='lg'
+          fontWeight={600}
+        >
+          <NextLink href='#introduction'>victorlwernay.dev</NextLink>
+        </Text>
+        <Center height='5vh'>
+          <Separator orientation='vertical' height="full" borderColor='gray.800' />
+        </Center>
+        <HStack as='nav' gap={4} display={['none', 'none', 'inherit']}>
+          {(headerNavItems.map((navItem) => (
+            <NavLink
+              key={navItem.route}
+              href={navItem.route}
+            >
+              {navItem.name}
+            </NavLink>
+          )))}
         </HStack>
-        <Flex alignItems='center'>
-          <HStack gap={7}>
-            <ColorModeButton />
-            <MenuRoot>
-              <MenuTrigger asChild display={['inherit', 'inherit', 'none']}>
-                <IconButton size="sm">
-                  <FaBars />
-                </IconButton>
-              </MenuTrigger>
-              <MenuContent>
-                {headerNavItems.map((navItem, index) => (
-                  <MenuItem key={index} value={navItem.route}>
-                    <NextLink href={navItem.route}>
-                      {navItem.name}
-                    </NextLink>
-                  </MenuItem>
-                ))}
-              </MenuContent>
-            </MenuRoot>
-          </HStack>
-        </Flex>
+      </HStack>
+      <Flex alignItems='center'>
+        <HStack gap={7}>
+          <ColorModeButton />
+          <MenuRoot>
+            <MenuTrigger asChild display={['inherit', 'inherit', 'none']}>
+              <IconButton size="sm">
+                <FaBars />
+              </IconButton>
+            </MenuTrigger>
+            <MenuContent>
+              {headerNavItems.map((navItem, index) => (
+                <MenuItem key={index} value={navItem.route}>
+                  <NextLink href={navItem.route}>
+                    {navItem.name}
+                  </NextLink>
+                </MenuItem>
+              ))}
+            </MenuContent>
+          </MenuRoot>
+        </HStack>
       </Flex>
-    </ClientOnly>
+    </Flex>
   )
 }

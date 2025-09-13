@@ -1,6 +1,3 @@
-'use client'
-
-import { useColorModeValue } from "@/components/ui/color-mode";
 import { footerData } from "@/constants";
 import { Box, ClientOnly, Flex, HStack, IconButton, Link, Text } from "@chakra-ui/react";
 import { SkeletonText } from "./ui/skeleton";
@@ -28,7 +25,7 @@ export default function Footer() {
           <Text
             textAlign='center'
             fontSize='sm'
-            color={useColorModeValue('gray.800', 'gray.200')}
+            color="gray.fg"
           >
             {footerData.author}
           </Text>
@@ -42,6 +39,7 @@ export default function Footer() {
               variant='ghost'
               size='lg'
               borderRadius="full"
+              asChild
             >
               <Link target="_blank" rel="noopener noreferrer" href={socialMedia.url} aria-label={`Check my ${socialMedia.name} profile`}>
                 {socialMedia.icon}
