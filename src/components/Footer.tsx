@@ -42,6 +42,7 @@ export default function Footer() {
               variant='ghost'
               size='lg'
               borderRadius="full"
+              asChild
             >
               <Link target="_blank" rel="noopener noreferrer" href={socialMedia.url} aria-label={`Check my ${socialMedia.name} profile`}>
                 {socialMedia.icon}
