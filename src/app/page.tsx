@@ -1,4 +1,4 @@
-import Career from "@/components/sections/Career"
+import Career from "@/components/sections/career"
 import Contact from "@/components/sections/contact"
 import Introduction from "@/components/sections/Introduction"
 import TechStack from "@/components/sections/TechStack"
