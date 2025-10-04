@@ -163,6 +163,17 @@ export const techStacks: { [key: string]: TechStack[] } = {
 export const careerProjects: { [key: string]: PersonalProject[] } = {
   Works: [
     {
+      name: "Turing",
+      image: {
+        url: "/images/turing.webp",
+        alt: "Turing Enterprises",
+      },
+      summary:
+        "At Turing, I work as an LLM Trainer (Prompt Engineering/SFT/RLHF). Refining and enhancing AI models using SFT to deliver accurate and contextually relevant responses.",
+      link: "https://www.turing.com/",
+      techs: ["JSON", "SFT", "RLHF", "MCP", "AI", "LLM"],
+    },
+    {
       name: "ZentriX Shop",
       image: {
         url: "/images/zentrix_shop_preview.webp",
