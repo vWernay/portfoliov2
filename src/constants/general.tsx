@@ -33,7 +33,7 @@ export const headerNavItems = [
 ]
 
 export const footerData: FooterData = {
-  author: `Copyright © ${new Date().getFullYear()} Victor Lellis.`,
+  author: `Copyright © ${new Date().getFullYear()} Victor Wernay.`,
   socialUrls: [
     {
       name: "Github",

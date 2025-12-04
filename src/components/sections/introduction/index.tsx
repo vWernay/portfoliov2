@@ -22,7 +22,7 @@ export default function Introduction() {
           as="h1"
           fontSize={{ base: "1.75rem", md: "2.5rem", lg: "3rem" }}
         >
-          {"Hi, I'm Victor Lellis!"}
+          {"Hi, I'm Victor Wernay!"}
         </Heading>
         <Avatar
           name={introductionAvatar.name}

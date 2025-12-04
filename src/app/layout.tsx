@@ -5,43 +5,108 @@ import { Provider } from "@/components/ui/provider"
 import { Toaster } from "@/components/ui/toaster"
 import { fonts } from "./theme/fonts"
 
+const meta = {
+  title: "Victor Wernay | Software Engineer",
+  description:
+    "Full-Stack Engineer specializing in scalable Web Applications (Next.js/TanStack), Real-Time Systems, and AI Agent integration. Founder of ZentriX Systems.",
+  url: "https://www.victorlwernay.dev",
+  image: "https://avatars.githubusercontent.com/u/32583593?v=4",
+}
+
 export const metadata: Metadata = {
-  title: "Victor Lellis | FullStack Developer",
-  description: "A Web and Script full-stack developer.",
-  keywords:
-    "React, Vue, NodeJs, Javascript, Typescript, Lua, Cfx.re, FiveM, Portfolio, VictorLWB, Victor Lellis, Victor Wernay, Developer",
-  icons: "https://avatars.githubusercontent.com/u/32583593?v=4",
+  title: {
+    default: meta.title,
+    template: "%s | Victor Wernay",
+  },
+  description: meta.description,
+  keywords: [
+    "Software Engineer",
+    "Full-Stack Developer",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "AI Agents",
+    "LLM Engineering",
+    "Victor Wernay",
+    "Victor Lellis",
+    "ZentriX Systems",
+    "Web Development",
+    "Remote Engineer",
+  ],
+  authors: [{ name: "Victor Wernay", url: meta.url }],
+  creator: "Victor Wernay",
+  icons: meta.image,
   openGraph: {
-    type: "website",
-    url: "https://www.victorlwernay.dev",
-    title: "Victor Lellis | FullStack Developer",
-    siteName: "Victor Lellis | FullStack Developer",
-    description: "A Web and Script full-stack developer.",
+    type: "profile",
+    locale: "en_US",
+    url: meta.url,
+    title: meta.title,
+    description: meta.description,
+    siteName: "Victor Wernay Portfolio",
     images: [
       {
-        url: "https://avatars.githubusercontent.com/u/32583593?v=4",
+        url: meta.image,
         width: 1200,
         height: 630,
-        alt: "Profile photo of Victor Lellis, full-stack developer",
+        alt: "Victor Wernay - Software Engineer",
       },
     ],
+    firstName: "Victor",
+    lastName: "Wernay",
+    username: "vWernay",
+    gender: "male",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: meta.title,
+    description: meta.description,
+    images: [meta.image],
   },
   alternates: {
-    canonical: "https://www.victorlwernay.dev",
+    canonical: meta.url,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 }
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: "Victor Lellis",
-  url: "https://www.victorlwernay.dev",
+  name: "Victor Wernay",
+  givenName: "Victor",
+  familyName: "Wernay",
+  additionalName: "Victor Lellis",
+  url: meta.url,
+  image: meta.image,
   sameAs: [
     "https://github.com/vWernay",
     "https://linkedin.com/in/victor-lellis",
   ],
-  jobTitle: "FullStack Developer",
-  image: "https://avatars.githubusercontent.com/u/32583593?v=4",
+  jobTitle: "Software Engineer",
+  worksFor: {
+    "@type": "Organization",
+    name: "ZentriX Systems",
+  },
+  knowsAbout: [
+    "Software Engineering",
+    "React",
+    "Next.js",
+    "Artificial Intelligence",
+    "Computer Science",
+  ],
+  alumniOf: {
+    "@type": "CollegeOrUniversity",
+    name: "UDF University Center",
+  },
 }
 
 export default function RootLayout({
@@ -56,8 +121,6 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        <meta content="index, follow" name="robots" />
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
         <script
           // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD script tag
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
