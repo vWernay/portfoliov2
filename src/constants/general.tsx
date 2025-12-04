@@ -61,7 +61,7 @@ export const introductionAvatar = {
   name: "vWernay",
 }
 export const resumeLink =
-  "https://drive.google.com/file/d/1ytuyxhAkIsJSMwhKfH4Ic-Q0CHpacHKl/view?usp=sharing"
+  "https://docs.google.com/document/d/1F1E2vIhEyUXvg0HAFJOUw291ydI5tRHYr2SmU983yaI/edit?usp=sharing"
 
 export const techStacks: { [key: string]: TechStack[] } = {
   "Web (Frontend)": [
