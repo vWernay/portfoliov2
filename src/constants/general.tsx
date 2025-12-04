@@ -161,7 +161,7 @@ export const techStacks: { [key: string]: TechStack[] } = {
 }
 
 export const careerProjects: { [key: string]: PersonalProject[] } = {
-  Works: [
+  "Professional Work": [
     {
       name: "Turing",
       image: {
@@ -169,30 +169,27 @@ export const careerProjects: { [key: string]: PersonalProject[] } = {
         alt: "Turing Enterprises",
       },
       summary:
-        "At Turing, I work as an LLM Trainer (Prompt Engineering/SFT/RLHF). Refining and enhancing AI models using SFT to deliver accurate and contextually relevant responses.",
+        "Acting as an AI Training Engineer (RLHF/SFT), refining advanced LLMs for reasoning capabilities. Responsible for auditing MCP (Model Context Protocol) agent tools and reducing logic inconsistencies in complex multi-turn conversations.",
       link: "https://www.turing.com/",
-      techs: ["JSON", "SFT", "RLHF", "MCP", "AI", "LLM"],
+      techs: ["AI Agents", "LLM", "RLHF", "SFT", "Python", "JSON"],
     },
     {
-      name: "ZentriX Shop",
+      name: "ZentriX Systems",
       image: {
         url: "/images/zentrix_shop_preview.webp",
-        alt: "ZentriX Shop Website",
+        alt: "ZentriX Digital Marketplace",
       },
       summary:
-        "ZentriX Shop was started by me on 2019 as a Cfx.re (FiveM) Server, nowadays became a Shop with about 300 public customers, providing ready packages and private orders. Recently, I developed the storefront using Next 15, React 19 and Tebex API.",
+        "A proprietary SaaS and digital marketplace platform serving 300+ international clients. Originally an infrastructure project, it evolved into a modern e-commerce solution built with Next.js 15 and React 19, featuring automated payment gateways and customer management.",
       link: "https://zentrix-shop.com/",
       techs: [
-        "Lua",
-        "Typescript",
-        "NodeJs",
-        "ReactJs",
-        "VueJs",
-        "SCSS",
-        "Redux",
-        "Zustand",
+        "Next.js 15",
+        "React 19",
+        "TypeScript",
+        "Node.js",
         "MySQL",
-        "NextJs",
+        "Zustand",
+        "Tebex API",
       ],
     },
     {
@@ -202,154 +199,123 @@ export const careerProjects: { [key: string]: PersonalProject[] } = {
         alt: "IF Developments Page",
       },
       summary:
-        "I'm a Senior Fullstack Developer at IF Developments, which provides to the Cfx.re community the highest quality experience, using modern UI's and backend.",
+        "Lead Full-Stack Developer for a premier software house in the gaming sector. Responsible for architecting high-performance backends and delivering polished, responsive User Interfaces for thousands of end-users.",
       link: "https://if-developments.tebex.io/",
       techs: [
+        "React",
+        "TypeScript",
         "Lua",
-        "Typescript",
-        "ReactJs",
-        "SCSS",
         "Redux",
         "Zustand",
         "MySQL",
+        "SCSS",
       ],
     },
   ],
-  Freelance: [
+  "Real-Time Systems": [
     {
-      name: "Game Dashboard",
-      image: { url: "/images/zentrix_dashboard.webp", alt: "Dashboard" },
+      name: "Group Manager Enterprise",
+      image: {
+        url: "/images/groupmanager.webp",
+        alt: "Group Manager Interface",
+      },
       summary:
-        "A Game Dashboard and built-in store for a MTA server, built in 2021.",
-      techs: [
-        "Javascript",
-        "React",
-        "Axios",
-        "SCSS",
-        "MUI v4",
-        "NodeJs",
-        "Express",
-        "MySQL",
-        "Sequelize",
-        "Payment Gateways",
-      ],
+        "A comprehensive organization management system architected for high-concurrency environments. Features role-based access control (RBAC), multi-language support, and deep configuration capabilities.",
+      techs: ["React", "TypeScript", "Redux", "MUI v5", "MySQL", "Lua", "Vite"],
     },
     {
-      name: "FuelTech NUI",
+      name: "FuelTech FT450 Sim",
       image: {
         url: "/images/brp_fueltech.webp",
-        alt: "FuelTech In game (GTA 5)",
+        alt: "FuelTech Simulation",
       },
       summary:
-        "Developed a custom NUI interface for FiveM, simulating the functionality of the FuelTech FT450.",
-      techs: ["Javascript", "jQuery", "SCSS", "MySQL", "Lua"],
+        "A complex UI simulation project that replicates the real-world ECU FuelTech FT450 functionality within a browser environment (NUI), demonstrating pixel-perfect implementation and complex state management.",
+      techs: ["JavaScript", "Lua", "CSS Modules", "MySQL"],
     },
     {
-      name: "WheelSpin NUI",
+      name: "WheelSpin Dynamic",
       image: {
         url: "/images/brp_wheelspin.webp",
-        alt: "WheelSpin In game (GTA 5)",
+        alt: "WheelSpin System",
       },
       summary:
-        "Developed a dynamic wheelspin script inspired by Forza Horizon 5 for FiveM. This project features dynamic prize management and a faithful recreation of the Forza wheelspin interface, delivering an authentic experience for players.",
+        "A physics-inspired gamification module featuring dynamic probability algorithms and prize management. Built to handle real-time user interactions with smooth animations and secure backend validation.",
       techs: [
-        "TypeScript",
         "React",
+        "TypeScript",
         "ChakraUI",
         "Zustand",
         "Vite",
-        "MySQL",
         "Lua",
+        "MySQL",
       ],
     },
     {
-      name: "Groupmanager",
-      image: {
-        url: "/images/groupmanager.webp",
-        alt: "Groupmanager In game (GTA 5)",
-      },
+      name: "Legacy Dashboard",
+      image: { url: "/images/zentrix_dashboard.webp", alt: "Game Dashboard" },
       summary:
-        "A powerful and versatile FiveM script developed over one year to provide seamless group/org management for servers. Featuring more than 10 pages, it delivers extensive functionality while supporting multi-language environments and themes. Designed with flexibility in mind, the script is entirely configurable, making it easy to adapt to various server needs and ensuring an optimal user experience.",
-      techs: ["TypeScript", "React", "MUI v5", "Redux", "Vite", "MySQL", "Lua"],
+        "A full-stack player control panel and e-commerce integration. Handled user authentication, inventory management, and real-time data syncing between the web interface and the game server.",
+      techs: [
+        "React",
+        "Node.js",
+        "Express",
+        "MySQL",
+        "Sequelize",
+        "Payment APIs",
+      ],
     },
   ],
-  "Open Source": [
+  "Open Source & R&D": [
     {
-      name: "CashInfinitec App",
-      image: { url: "/images/cashinfinitec.webp", alt: "CashInfinitec APP" },
+      name: "Node.js ETL Pipeline",
+      image: {
+        url: "/images/node-pg-csv.webp",
+        alt: "Node.js ETL Pipeline",
+      },
       summary:
-        "It's a mobile app developed during a college project focused on business modeling and requirements analysis. After the prototyping phase in Figma, I decided to independently develop the mobile application using React Native with Expo.",
-      link: "https://github.com/vWernay/cashinfinitec-app",
-      techs: ["React Native", "Typescript", "Expo", "NativeWind", "Zod"],
+        "High-performance ETL (Extract, Transform, Load) script designed to process large datasets. Utilizes Node.js Streams and Pipeline API to export PostgreSQL data to CSV with minimal memory footprint.",
+      link: "https://github.com/vWernay/node-pg-csv",
+      techs: ["Node.js Streams", "TypeScript", "PostgreSQL", "Performance"],
     },
     {
-      name: "Arduino Car Controller",
+      name: "CashInfinitec Mobile",
+      image: { url: "/images/cashinfinitec.webp", alt: "CashInfinitec APP" },
+      summary:
+        "A Fintech mobile prototype developed for business modeling analysis. Built with React Native and Expo, focusing on clean architecture and strict type validation with Zod.",
+      link: "https://github.com/vWernay/cashinfinitec-app",
+      techs: ["React Native", "Expo", "TypeScript", "NativeWind", "Zod"],
+    },
+    {
+      name: "IoT Car Controller",
       image: {
         url: "/images/gg_arduino_car_controller.webp",
         alt: "Arduino Controller APP",
       },
       summary:
-        'It\'s a mobile application developed for the "CEM 01 do Guará" educational institution, designed to control Arduino-based BT cars made on robotics classes, using Classic Bluetooth.',
+        "IoT mobile application for educational robotics. Bridges React Native via Bluetooth Classic to control Arduino-based hardware in real-time.",
       link: "https://github.com/vWernay/gg-arduino-car-controller",
       techs: [
         "React Native",
-        "Typescript",
+        "Bluetooth Protocol",
+        "TypeScript",
         "Expo",
-        "TailwindCSS",
-        "Classic Bluetooth Lib",
+        "IoT",
       ],
     },
     {
-      name: "Node.js - PostgreSQL to CSV",
-      image: {
-        url: "/images/node-pg-csv.webp",
-        alt: "Illustration with PostgreSQL, Node.js and CSV icons.",
-      },
-      summary:
-        "A Node.js script that exports huge data from a PostgreSQL database into a CSV file using streams, pipeline and query cursor.",
-      link: "https://github.com/vWernay/node-pg-csv",
-      techs: ["Typescript", "NodeJs", "PostgreSQL"],
-    },
-    {
-      name: "Plann.er (NLW Journey)",
+      name: "Plann.er (Trip Planner)",
       image: { url: "/images/planner_preview.webp", alt: "Plann.er Page" },
       summary:
-        "A Website designed to help you and your friends plan trips, record activities, and save useful links. The project was developed during the NLW Journey by Rocketseat in July 2024.",
+        "Full-stack travel management application. Implemented modern backend patterns with Fastify/Prisma and a reactive frontend for collaborative trip planning.",
       link: "https://github.com/vWernay/nlw-journey",
       techs: [
-        "Typescript",
         "React",
-        "Vite",
-        "TailwindCSS",
-        "Axios",
-        "NodeJs",
-        "Prisma",
+        "TypeScript",
+        "Node.js",
         "Fastify",
-        "Zod",
-      ],
-    },
-    {
-      name: "Time Capsule (NLW Spacetime)",
-      image: {
-        url: "/images/time_capsule_preview.webp",
-        alt: "Time Capsule Previews",
-      },
-      summary:
-        "A full-stack application, from back-end to mobile, works like a time capsule that stores past memories in a timeline. The project was developed during the NLW Spacetime by Rocketseat in May 2023.",
-      link: "https://github.com/vWernay/nlw-12-spacetime-ignite",
-      techs: [
-        "Typescript",
-        "React",
-        "React Native",
-        "NextJs",
-        "Vite",
-        "Expo",
-        "TailwindCSS",
-        "Axios",
-        "NodeJs",
         "Prisma",
-        "Fastify",
-        "Zod",
+        "TailwindCSS",
       ],
     },
   ],
