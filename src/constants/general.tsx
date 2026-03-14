@@ -214,6 +214,24 @@ export const careerProjects: { [key: string]: PersonalProject[] } = {
   ],
   "Real-Time Systems": [
     {
+      name: "Phone NUI",
+      image: {
+        url: "/images/brp_phone.webp",
+        alt: "Phone Interface",
+      },
+      summary:
+        "A full-featured mobile script for FiveM, featuring a modern interface inspired by contemporary smartphone OS design. It includes core apps like Marketplace, Services, Quotes, Messages, Contacts, Bank, and Settings, all styled with a clean, flat look and subtle liquid glass effects.",
+      techs: [
+        "Vue",
+        "TypeScript",
+        "Pinia",
+        "TailwindCSS",
+        "MySQL",
+        "Lua",
+        "Vite",
+      ],
+    },
+    {
       name: "Group Manager Enterprise",
       image: {
         url: "/images/groupmanager.webp",
