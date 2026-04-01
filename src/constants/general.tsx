@@ -163,6 +163,17 @@ export const techStacks: { [key: string]: TechStack[] } = {
 export const careerProjects: { [key: string]: PersonalProject[] } = {
   "Professional Work": [
     {
+      name: "Alignerr",
+      image: {
+        url: "/images/alignerr.webp",
+        alt: "Alignerr",
+      },
+      summary:
+        "Enhanced LLM code generation quality by designing and executing rigorous testing and validation workflows. Analyzed model outputs to ensure correctness, handle edge cases, and maintain consistency across complex programming scenarios. Drove critical fine-tuning efforts by identifying systemic failure patterns and optimizing instructional design.",
+      link: "https://www.alignerr.com/",
+      techs: ["LLM", "RLHF", "SFT", "Lua", "Game Development", "JSON"],
+    },
+    {
       name: "Turing",
       image: {
         url: "/images/turing.webp",
