@@ -1,0 +1,157 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">KYC age gate system preview</title>
+  <desc id="desc">Abstract interface showing a verified eighteen plus player access flow, webhooks, and a secure backend service.</desc>
+  
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#020617"/>
+      <stop offset="0.5" stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#042F2E"/>
+    </linearGradient>
+    
+    <linearGradient id="card-glow" x1="176" y1="108" x2="1024" y2="612" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1E293B" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#0F172A" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <linearGradient id="border-gradient" x1="176" y1="108" x2="1024" y2="612" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#334155"/>
+      <stop offset="0.5" stop-color="#1E293B"/>
+      <stop offset="1" stop-color="#14532D"/>
+    </linearGradient>
+
+    <!-- Component Accents -->
+    <linearGradient id="badge-green" x1="744" y1="160" x2="958" y2="224" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#15803D"/>
+      <stop offset="1" stop-color="#22C55E"/>
+    </linearGradient>
+
+    <linearGradient id="webhook-accent" x1="530" y1="252" x2="722" y2="544" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1E1B4B"/>
+      <stop offset="1" stop-color="#311042"/>
+    </linearGradient>
+
+    <!-- Drop Shadows -->
+    <filter id="drop-shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1200" height="720" rx="40" fill="url(#bg)"/>
+  
+  <!-- Ambient Background Orbs -->
+  <circle cx="150" cy="150" r="180" fill="#22C55E" fill-opacity="0.05" filter="url(#glow)"/>
+  <circle cx="1050" cy="550" r="220" fill="#0EA5E9" fill-opacity="0.05" filter="url(#glow)"/>
+
+  <!-- Main Container Interface (Glassmorphic Dashboard Layer) -->
+  <rect x="176" y="108" width="848" height="504" rx="32" fill="url(#card-glow)" filter="url(#drop-shadow)"/>
+  <rect x="176" y="108" width="848" height="504" rx="32" stroke="url(#border-gradient)" stroke-width="2"/>
+
+  <!-- Header: Title Section -->
+  <g transform="translate(224, 156)">
+    <rect width="48" height="48" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <circle cx="24" cy="24" r="10" fill="none" stroke="#EF4444" stroke-width="3"/>
+    <text x="18" y="29" fill="#EF4444" font-family="Segoe UI, -apple-system, sans-serif" font-size="15" font-weight="800">18</text>
+    <text x="84" y="33" fill="#F8FAFC" font-family="Segoe UI, -apple-system, sans-serif" font-size="28" font-weight="700" letter-spacing="-0.5">KYC Age Gate</text>
+  </g>
+
+  <!-- Header: Global Status Badge -->
+  <g filter="url(#drop-shadow)">
+    <rect x="792" y="156" width="180" height="48" rx="14" fill="url(#badge-green)"/>
+    <circle cx="820" cy="180" r="5" fill="#F0FDF4" filter="url(#glow)"/>
+    <text x="838" y="189" fill="#F0FDF4" font-family="Segoe UI, -apple-system, sans-serif" font-size="18" font-weight="800" letter-spacing="1.5">VERIFIED</text>
+  </g>
+
+  <!-- Connecting Data Streams (Behind Cards) -->
+  <g stroke="#334155" stroke-width="3" stroke-dasharray="8 6">
+    <path d="M472 400H530" />
+    <path d="M722 400H780" />
+  </g>
+  <!-- Active Signal Indicators -->
+  <circle cx="501" cy="400" r="5" fill="#38BDF8" filter="url(#glow)"/>
+  <circle cx="751" cy="400" r="5" fill="#38BDF8" filter="url(#glow)"/>
+
+  <!-- CARD 1: Client Verification Context -->
+  <g transform="translate(224, 252)" filter="url(#drop-shadow)">
+    <rect width="248" height="280" rx="24" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <!-- UI Skeleton Header -->
+    <rect x="24" y="24" width="120" height="12" rx="6" fill="#475569"/>
+    <rect x="24" y="44" width="70" height="8" rx="4" fill="#334155"/>
+    <!-- Status Presentation Illustration -->
+    <circle cx="124" cy="130" r="48" fill="#14532D" fill-opacity="0.4"/>
+    <circle cx="124" cy="130" r="38" fill="#16A34A" fill-opacity="0.2"/>
+    <circle cx="124" cy="130" r="26" fill="#22C55E"/>
+    <path d="M114 130L121 137L135 122" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Label -->
+    <text x="124" y="218" text-anchor="middle" fill="#F8FAFC" font-family="Segoe UI, -apple-system, sans-serif" font-size="20" font-weight="600">Adult Verification</text>
+    <rect x="64" y="236" width="120" height="6" rx="3" fill="#334155"/>
+  </g>
+
+  <!-- CARD 2: Middleware / Webhook Engine -->
+  <g transform="translate(520, 232)" filter="url(#drop-shadow)">
+    <rect width="248" height="320" rx="28" fill="#090D16" stroke="#22C55E" stroke-width="2" stroke-opacity="0.6" fill-opacity="0.95"/>
+    <!-- Server Grid Pattern Mockup -->
+    <rect x="24" y="24" width="200" height="12" rx="6" fill="#1E293B"/>
+    <rect x="24" y="44" width="140" height="8" rx="4" fill="#1E293B"/>
+    <!-- Middleware Active Screen Container -->
+    <rect x="20" y="80" width="208" height="216" rx="20" fill="url(#webhook-accent)" stroke="#312E81" stroke-width="1.5"/>
+    <!-- Console Elements -->
+    <g transform="translate(40, 116)">
+      <rect width="48" height="24" rx="8" fill="#312E81" stroke="#4338CA" stroke-width="1"/>
+      <text x="24" y="16" text-anchor="middle" fill="#818CF8" font-family="monospace" font-size="11" font-weight="700">POST</text>
+      <text x="60" y="17" fill="#4ADE80" font-family="Segoe UI, -apple-system, sans-serif" font-size="18" font-weight="700">Webhook</text>
+      <text x="0" y="52" fill="#94A3B8" font-family="Segoe UI, -apple-system, sans-serif" font-size="15" font-weight="500">Didit Event Pipeline</text>
+    </g>
+    <!-- Code Minimal Blueprint Lines -->
+    <rect x="40" y="204" width="140" height="5" rx="2.5" fill="#6366F1" fill-opacity="0.5"/>
+    <rect x="40" y="217" width="168" height="5" rx="2.5" fill="#38BDF8" fill-opacity="0.4"/>
+    <rect x="40" y="230" width="96" height="5" rx="2.5" fill="#4ADE80" fill-opacity="0.5"/>
+    <!-- Glowing status anchor -->
+    <circle cx="124" cy="266" r="4" fill="#4ADE80" filter="url(#glow)"/>
+  </g>
+
+  <!-- CARD 3: Secure Internal Target Flow -->
+  <g transform="translate(816, 252)" filter="url(#drop-shadow)">
+    <rect width="248" height="280" rx="24" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <!-- UI Skeleton Header -->
+    <rect x="24" y="24" width="100" height="12" rx="6" fill="#475569"/>
+    <rect x="24" y="44" width="132" height="8" rx="4" fill="#334155"/>
+    <!-- Internal Database / Process Abstract Bars -->
+    <g transform="translate(24, 106)">
+      <!-- Title -->
+      <text x="0" y="16" fill="#F8FAFC" font-family="Segoe UI, -apple-system, sans-serif" font-size="18" font-weight="600">Internal Service</text>
+      <!-- Data Stack Representation -->
+      <rect x="0" y="38" width="200" height="14" rx="7" fill="#020617"/>
+      <rect x="0" y="38" width="180" height="14" rx="7" fill="#38BDF8" fill-opacity="0.8"/>
+      
+      <rect x="0" y="64" width="200" height="14" rx="7" fill="#020617"/>
+      <rect x="0" y="64" width="134" height="14" rx="7" fill="#22C55E" fill-opacity="0.8"/>
+
+      <rect x="0" y="90" width="200" height="14" rx="7" fill="#020617"/>
+      <rect x="0" y="90" width="92" height="14" rx="7" fill="#6366F1" fill-opacity="0.8"/>
+    </g>
+    <!-- Micro Lock Icon -->
+    <path d="M120 234V229C120 224.58 123.58 221 128 221C132.42 221 136 224.58 136 229V234M114 234H142V248H114V234Z" stroke="#94A3B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Bottom Architecture Specifications Meta-Labels -->
+  <g transform="translate(0, 574)" font-family="Segoe UI, -apple-system, sans-serif" font-size="15" font-weight="600" letter-spacing="0.5" text-anchor="middle">
+    <!-- Column 1 Meta -->
+    <text x="348" y="0" fill="#94A3B8">FiveM Client Script</text>
+    <circle cx="348" cy="14" r="3" fill="#475569"/>
+    
+    <!-- Column 2 Meta -->
+    <text x="644" y="0" fill="#38BDF8">TypeScript + Fastify Engine</text>
+    <circle cx="644" cy="14" r="3" fill="#0EA5E9"/>
+
+    <!-- Column 3 Meta -->
+    <text x="940" y="0" fill="#94A3B8">Secure Logic Processing</text>
+    <circle cx="940" cy="14" r="3" fill="#475569"/>
+  </g>
+</svg>

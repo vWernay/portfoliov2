@@ -225,6 +225,26 @@ export const careerProjects: { [key: string]: PersonalProject[] } = {
   ],
   "Real-Time Systems": [
     {
+      name: "KYC Age Gate for FiveM",
+      image: {
+        url: "/images/kyc-age-gate.svg",
+        alt: "KYC age verification flow for a FiveM server",
+      },
+      summary:
+        "An age-verification system built for a FiveM server adapting to Brazil's ECA Digital requirements. I created a TypeScript/Node.js service that receives Didit webhooks, manages KYC sessions, and exposes an internal secure flow consumed by a server-side game script to ensure only verified 18+ players can join.",
+      techs: [
+        "Node.js",
+        "TypeScript",
+        "Fastify",
+        "Drizzle",
+        "mysql2",
+        "Zod",
+        "FiveM",
+        "Lua",
+        "Webhooks",
+      ],
+    },
+    {
       name: "Phone NUI",
       image: {
         url: "/images/brp_phone.webp",
